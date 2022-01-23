@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@null">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="sans-serif"
+            android:soundEffectsEnabled="true"
+            android:text="Calculator"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:backgroundTint="@null"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/lightdark_menu"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="90dp"
+            android:background="@drawable/round_menu"
+            android:gravity="center_horizontal"
+            app:itemIconTint="@null"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/lightdarkmode" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:background="@null"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/tombol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>
